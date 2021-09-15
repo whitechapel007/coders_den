@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--caramaran);
+}
+
+:root {
+    --caramaran: "Catamaran", sans-serif;
+    --slant-hotel: "Grand Hotel", cursive;
+    --primary-green: #698f3f;
+    --secondary-orange: #fca311;
+    --mainDark: #3a3e3b;
+    --mainLight: #fff;
+    --mainGray: #e5e5e5;
+    --mainTransition: all 0.5s ease-in-out;
+    --letter-spacing: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-white {
+    color: var(--mainLight);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-color {
+    color: var(--letter-spacing);
+}
+
+/* header  */
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url(../images/background.jpg) center/cover no-repeat fixed;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-transform: capitalize;
+
+    transform: translate(-50%, -50%);
+    letter-spacing: var(--letter-spacing);
+}
+
+.banner-subtitle {
+    font-size: 2rem;
+    color: var(--primary-green);
+    animation: slideRight 2s ease-in-out 1;
+}
+
+.banner-title {
+    text-transform: uppercase;
+    font-style: 3.2rem;
+    margin-top: 2.5rem;
+    line-height: 1.3;
+    animation: slideLeft 2s ease-in-out 1;
+    color: var(--mainLight);
+}
+
+.main-btn,
+.banner-btn {
+    display: inline-block;
+    background: var(--primary-green);
+    text-transform: uppercase;
+    padding: 0.8rem 1.2rem;
+    color: var(--mainDark);
+    font-weight: bold;
+    outline: 0.2rem solid var(--primary-green);
+    outline-offset: 4px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: var(--mainTransition);
+}
+
+.main-btn:hover,
+.banner-btn:hover {
+    color: var(--mainLight);
+    opacity: 0.7;
+}
+
+.banner-btn {
+    padding: 0.2rem 1.5rem;
+    animation: show 2s 1 ease-in-out;
+}
+
+/* nanner animation  */
+
+@keyframes show {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    50% {
+        transform: translateX(-200px);
+    }
+
+    75% {
+        transform: translateX(70px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-1000px);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+
+    75% {
+        transform: translateX(-70px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* endo of animation  */
+
+/* content divider  */
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left,
+            var(--primary-green),
+            var(--secondary-orange),
+            var(--primary-green));
+}
+
+/* end content divider  */
+
+/* skills */
+.skills {
+    background-color: var(--mainGray);
+    display: flex;
+    flex-direction: column;
+}
+
+article div {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+article div img {
+    width: 60%;
+    object-fit: cover;
+    height: 100%;
+    transition: var(--mainTransition);
+}
+
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--mainTransition);
+}
+
+.skill-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
+
+.skill-text {
+    max-width: 13rem;
+    margin-inline: autof;
+}
+
+.skill:hover {
+    background-color: var(--primary-green);
+}
+
+.skill:hover .skill-title {
+    color: var(--mainLight);
+}
+
+.skill:hover div img {
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+    .skills {
+        flex-direction: row;
+    }
+
+    .skill {
+        width: 60%;
+    }
+}
+
+/* large screens  */
+@media screen and (min-width: 1200px) {
+    .skills {
+        flex-direction: row;
+    }
+
+    .skill {
+        width: 33%;
+    }
+}
+
+/* endo of skills  */
+
+/* about  */
+
+.section-center {
+    padding: 2rem 0;
+    width: 80vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.about-picture {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+}
+
+.about-img,
+.about-info {
+    padding: 1.4rem 0;
+}
+
+.about-picture-container {
+    background: var(--primary-green);
+    border: 0.5rem solid var(--primary-green);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.about-picture-container:hover .about-picture {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    color: var(--primary-green);
+}
+
+.section-title {
+    font-size: 1.2rem;
+}
+
+.about-text {
+    margin: 0.7rem 0;
+    max-width: 26rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    .about-img,
+    .about-info {
+        float: left;
+        width: 50%;
+        padding: 1.6rem;
+    }
+}
+
+/* end of about  */
+
+/* products section  */
+.products {
+    background: var(--mainDark);
+}
+
+.contact {
+    clear: both;
+    padding-top: 2rem;
+}
+
+.contact-item {
+    margin-bottom: 3rem;
+}
+
+.contact-title {
+    color: var(--primary-green);
+    font-family: var(--slant-hotel);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    font-size: 1.3rem;
+    margin-bottom: 0.5;
+}
+
+.contact-text {
+    text-transform: uppercase;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--primary-green);
+    outline: none;
+    margin: 2rem 0;
+    padding: 1.3rem 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.form-control::placeholder {
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
+
+.footer {
+    background: var(--mainDark);
+    text-align: center;
+}
+
+.social-icon {
+    color: var(--mainLight);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    transition: var(--mainTransition);
+}
+
+.social-icon:hover {
+    color: var(--primary-green);
+}
+
+.footer-text {
+    text-transform: uppercase;
+    color: var(--mainLight);
+    letter-spacing: var(--letter-spacing);
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
