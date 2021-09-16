@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap");
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,13 +34,21 @@ a {
     color: var(--letter-spacing);
 }
 
+
 /* header  */
 
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-        url(../images/background.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../images/background.jpg) center/cover no-repeat fixed;
     position: relative;
+}
+
+
+/* nav bar   */
+
+.nav-btn {
+    position: fixed;
+    z-index: 1;
 }
 
 .banner {
@@ -50,7 +57,6 @@ a {
     left: 50%;
     text-align: center;
     text-transform: capitalize;
-
     transform: translate(-50%, -50%);
     letter-spacing: var(--letter-spacing);
 }
@@ -96,14 +102,14 @@ a {
     animation: show 2s 1 ease-in-out;
 }
 
-/* nanner animation  */
+
+/* banner animation  */
 
 @keyframes show {
     0% {
         transform: scale(2);
         opacity: 0;
     }
-
     100% {
         transform: scale(1);
         opacity: 1;
@@ -114,15 +120,12 @@ a {
     0% {
         transform: translateX(1000px);
     }
-
     50% {
         transform: translateX(-200px);
     }
-
     75% {
         transform: translateX(70px);
     }
-
     100% {
         transform: translateX(0);
     }
@@ -132,34 +135,34 @@ a {
     0% {
         transform: translateX(-1000px);
     }
-
     50% {
         transform: translateX(200px);
     }
-
     75% {
         transform: translateX(-70px);
     }
-
     100% {
         transform: translateX(0);
     }
 }
 
+
 /* endo of animation  */
 
+
 /* content divider  */
+
 .content-divider {
     height: 0.5rem;
-    background: linear-gradient(to left,
-            var(--primary-green),
-            var(--secondary-orange),
-            var(--primary-green));
+    background: linear-gradient(to left, var(--primary-green), var(--secondary-orange), var(--primary-green));
 }
+
 
 /* end content divider  */
 
+
 /* skills */
+
 .skills {
     background-color: var(--mainGray);
     display: flex;
@@ -215,24 +218,26 @@ article div img {
     .skills {
         flex-direction: row;
     }
-
     .skill {
         width: 60%;
     }
 }
 
+
 /* large screens  */
+
 @media screen and (min-width: 1200px) {
     .skills {
         flex-direction: row;
     }
-
     .skill {
         width: 33%;
     }
 }
 
+
 /* endo of skills  */
+
 
 /* about  */
 
@@ -283,7 +288,6 @@ article div img {
 }
 
 @media screen and (min-width: 992px) {
-
     .about-img,
     .about-info {
         float: left;
@@ -292,9 +296,12 @@ article div img {
     }
 }
 
+
 /* end of about  */
 
+
 /* products section  */
+
 .products {
     background: var(--mainDark);
 }
