@@ -1,10 +1,19 @@
 const navBtn = document.getElementById('nav-btn');
 const navBar = document.getElementById('navbar');
 const navClose = document.getElementById('nav-close');
-navBtn.addEventListener('click', () => {
-    navBar.classList.add('nav-active')
-})
+const navLink = document.querySelectorAll('.nav-link');
 
 navBtn.addEventListener('click', () => {
-    navClose.classList.remove('nav-active')
+    navBar.classList.toggle('nav-active')
+})
+
+navClose.addEventListener('click', () => {
+    navBar.classList.toggle('nav-active')
+})
+navLink.forEach(link => {
+    link.addEventListener('click', () => {
+        navBar.classList.toggle('nav-active')
+
+    })
+
 })

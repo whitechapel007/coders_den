@@ -222,7 +222,7 @@
                     flex-direction: column;
                 }
                 
-                article div {
+                article.skill div {
                     margin-top: 1rem;
                     width: 100%;
                     display: flex;
@@ -352,6 +352,12 @@
                 .contact {
                     clear: both;
                     padding-top: 2rem;
+                    text-align: center;
+                }
+                
+                .contact-inf * {
+                    margin: .8rem 0;
+                    font-family: 'Times New Roman', Times, serif;
                 }
                 
                 .contact-item {
@@ -360,11 +366,17 @@
                 
                 .contact-title {
                     color: var(--primary-green);
-                    font-family: var(--slant-hotel);
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                     text-transform: uppercase;
                     letter-spacing: var(--letter-spacing);
                     font-size: 1.3rem;
                     margin-bottom: 0.5;
+                    transition: var(--mainTransition);
+                }
+                
+                .contact-title:hover {
+                    color: var(--mainDark);
+                    transform: scale(.8);
                 }
                 
                 .contact-text {
@@ -412,3 +424,86 @@
                     margin-top: 1rem;
                     font-size: 0.8rem;
                 }
+                
+                .clear {
+                    clear: both;
+                }
+                /* services  */
+                
+                .services {
+                    background: var(--mainGray);
+                }
+                
+                .services-title {
+                    padding-top: 4rem;
+                }
+                
+                .service-card {
+                    border: .2rem solid var(--primary-green);
+                    padding: 0.2rem;
+                    border-radius: 1rem;
+                    margin: 2rem 0;
+                }
+                
+                .service-img {
+                    display: block;
+                    width: 100%;
+                    border-top-left-radius: 0.5rem;
+                    border-top-right-radius: 0.5rem;
+                }
+                
+                .service-info {
+                    background: var(--primary-green);
+                    border-bottom-left-radius: 0.5rem;
+                    border-bottom-right-radius: 0.5rem;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    letter-spacing: var(--letter-spacing);
+                    color: var(--mainGray);
+                    text-transform: capitalize;
+                    padding: 2.5rem 0 1rem 0;
+                }
+                
+                .service-btn {
+                    display: inline-block;
+                    background: var(--mainLight);
+                    padding: 0.6rem 1rem;
+                    color: var(--primary-green);
+                    font-weight: bold;
+                    border: .2rem solid var(--mainLight);
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    margin-top: 1rem;
+                    transition: var(--mainTransition);
+                }
+                
+                .service-btn:hover {
+                    background: transparent;
+                    color: var(--mainLight);
+                }
+                
+                @media screen and (min-width: 768px) {
+                    .service-card {
+                        float: left;
+                        width: 45%;
+                        margin-right: 5%;
+                    }
+                    .services {
+                        min-height: 100vh;
+                    }
+                }
+                
+                @media screen and (min-width: 992px) {
+                    .service-card {
+                        float: left;
+                        width: auto;
+                        margin-right: 2.3%;
+                    }
+                    .services {
+                        min-height: 200vh;
+                    }
+                    .services .section-center {
+                        display: flex;
+                    }
+                }
+                /*end of services  */
